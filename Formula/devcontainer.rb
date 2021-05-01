@@ -5,20 +5,20 @@
 class Devcontainer < Formula
   desc "CLI for working with Visual Studio Code devcontainers"
   homepage "https://github.com/stuartleeks/devcontainer-cli"
-  version "0.1.801703340"
+  version "0.1.801762435"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/stuartleeks/devcontainer-cli/releases/download/v0.1.801703340/devcontainer-cli_darwin_amd64.tar.gz"
-    sha256 "2156c7a9851e18f92616735cc8b83563d42ea04d0a66f825a7e56326b8d42b3b"
+    url "https://github.com/stuartleeks/devcontainer-cli/releases/download/v0.1.801762435/devcontainer-cli_darwin_amd64.tar.gz"
+    sha256 "9ee857692adf437b48fe6af0a122e0fdaad3652f8ffd6f9052b6af0dab5815a8"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/stuartleeks/devcontainer-cli/releases/download/v0.1.801703340/devcontainer-cli_linux_amd64.tar.gz"
-    sha256 "a7e4cdc1639686cd585dfe95531fc45b295016396a49d038f9765fc682063529"
+    url "https://github.com/stuartleeks/devcontainer-cli/releases/download/v0.1.801762435/devcontainer-cli_linux_amd64.tar.gz"
+    sha256 "f650f9263f3bbad7bbb34d70a7348b9bbc99af38d1260a45cbf7b946d1765d1f"
   end
 
   def install
-    bin.install "devcontainer-cli"
+    bin.install "devcontainer"
   end
 
   test do
