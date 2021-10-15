@@ -5,16 +5,21 @@
 class Devcontainer < Formula
   desc "CLI for working with Visual Studio Code devcontainers"
   homepage "https://github.com/stuartleeks/devcontainer-cli"
-  version "0.1.1002158801"
+  version "0.1.1345412856"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/stuartleeks/devcontainer-cli/releases/download/v0.1.1002158801/devcontainer-cli_darwin_amd64.tar.gz"
-    sha256 "686f5d254c8055c3507b201470fd15ae5226c97cf11e8c38c873ce88c6a0f6a8"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/stuartleeks/devcontainer-cli/releases/download/v0.1.1345412856/devcontainer-cli_darwin_amd64.tar.gz"
+      sha256 "afed1b29fc72e9ed2a1638ed3a7abd4310b358e06dbef811afdf04aba756f6c7"
+    end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/stuartleeks/devcontainer-cli/releases/download/v0.1.1002158801/devcontainer-cli_linux_amd64.tar.gz"
-    sha256 "549f1b2cb4e31317aa370f3f8a0af025e2b59ae415a22a8b86c3bcef0fa94750"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/stuartleeks/devcontainer-cli/releases/download/v0.1.1345412856/devcontainer-cli_linux_amd64.tar.gz"
+      sha256 "76b95426d006f31af5e24158ae8291b6ed3d85a151fb6491e64017a2e37a35c8"
+    end
   end
 
   def install
