@@ -5,20 +5,20 @@
 class Devcontainer < Formula
   desc "CLI for working with Visual Studio Code devcontainers"
   homepage "https://github.com/stuartleeks/devcontainer-cli"
-  version "0.1.1727394004"
+  version "0.1.2493405719"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/stuartleeks/devcontainer-cli/releases/download/v0.1.1727394004/devcontainer-cli_darwin_amd64.tar.gz"
-      sha256 "4090da5e6764ae4f8c251335dd9d33a7ec33fd34b3b8a215cf0b32ec57440325"
+      url "https://github.com/stuartleeks/devcontainer-cli/releases/download/v0.1.2493405719/devcontainer-cli_darwin_amd64.tar.gz"
+      sha256 "2bea934fa799df6d863b22333527ae4b7381e6b933d1e3cf30ccf3536979e4f2"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/stuartleeks/devcontainer-cli/releases/download/v0.1.1727394004/devcontainer-cli_linux_amd64.tar.gz"
-      sha256 "07863e8ce386317d1ce3923724e2c97a058160560ceb8be3a4dcba417cb2be48"
+      url "https://github.com/stuartleeks/devcontainer-cli/releases/download/v0.1.2493405719/devcontainer-cli_linux_amd64.tar.gz"
+      sha256 "535e065851b4ac45065ef979a13e1a32a23c2da8def113e7969d3f241dd90dff"
     end
   end
 
