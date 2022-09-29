@@ -5,25 +5,36 @@
 class Devcontainer < Formula
   desc "CLI for working with Visual Studio Code devcontainers"
   homepage "https://github.com/stuartleeks/devcontainer-cli"
-  version "0.1.2493445248"
-  bottle :unneeded
+  version "0.1.3149538034"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/stuartleeks/devcontainer-cli/releases/download/v0.1.2493445248/devcontainer-cli_darwin_amd64.tar.gz"
-      sha256 "afa393befef530ced16dd49bee127e270793ad51077480ec9a25c56228729ea4"
+    url "https://github.com/stuartleeks/devcontainer-cli/releases/download/v0.1.3149538034/devcontainer-cli_darwin_amd64.tar.gz"
+    sha256 "75f886340b665ed07bb8ba89a38248138af5efd24b8a1ceaab3fd6934ebb0746"
+
+    def install
+      bin.install "devcontainer"
+    end
+
+    if Hardware::CPU.arm?
+      def caveats
+        <<~EOS
+          The darwin_arm64 architecture is not supported for the Devcontainer
+          formula at this time. The darwin_amd64 binary may work in compatibility
+          mode, but it might not be fully supported.
+        EOS
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/stuartleeks/devcontainer-cli/releases/download/v0.1.2493445248/devcontainer-cli_linux_amd64.tar.gz"
-      sha256 "f2ec8caf0897bc4955c95d818ffbfeb79335ffc2ff904dde7fc0d2272190b80e"
-    end
-  end
+      url "https://github.com/stuartleeks/devcontainer-cli/releases/download/v0.1.3149538034/devcontainer-cli_linux_amd64.tar.gz"
+      sha256 "d4d512e49ebada5eef9f1e61fe8138234eb7fda5cb9412a096aa580f24c5fe49"
 
-  def install
-    bin.install "devcontainer"
+      def install
+        bin.install "devcontainer"
+      end
+    end
   end
 
   test do
