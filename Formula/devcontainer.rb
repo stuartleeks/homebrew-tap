@@ -5,11 +5,11 @@
 class Devcontainer < Formula
   desc "CLI for working with Visual Studio Code devcontainers"
   homepage "https://github.com/stuartleeks/devcontainer-cli"
-  version "0.1.4426856425"
+  version "0.1.5001320254"
 
   on_macos do
-    url "https://github.com/stuartleeks/devcontainer-cli/releases/download/v0.1.4426856425/devcontainer-cli_darwin_amd64.tar.gz"
-    sha256 "21b74490aa54479c6b79188483980d47217eee45c6070c8cf4fc30317efaa8e5"
+    url "https://github.com/stuartleeks/devcontainer-cli/releases/download/v0.1.5001320254/devcontainer-cli_darwin_amd64.tar.gz"
+    sha256 "58e569e8cc1b22b0c3e6b0567d6693c83f6b02674b1bf93ca6557c30c4729239"
 
     def install
       bin.install "devcontainerx"
@@ -28,8 +28,8 @@ class Devcontainer < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/stuartleeks/devcontainer-cli/releases/download/v0.1.4426856425/devcontainer-cli_linux_amd64.tar.gz"
-      sha256 "1ae9eb3e69a9fe778cd7e534940789b3117548daaf349ffc49921e7417cfb2b6"
+      url "https://github.com/stuartleeks/devcontainer-cli/releases/download/v0.1.5001320254/devcontainer-cli_linux_amd64.tar.gz"
+      sha256 "46b1bb69bb474a31f48c8cf0ca1870f20935ecf2e7b121e41f81fd835d32c08e"
 
       def install
         bin.install "devcontainerx"
